@@ -46,7 +46,9 @@ export default function HomePage() {
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    if (!file) return
+    
+    if (!file) 
+      return
 
     const formData = new FormData()
     formData.append('file', file)

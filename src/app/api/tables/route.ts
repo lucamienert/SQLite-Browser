@@ -6,9 +6,8 @@ import fs from 'fs'
 const dbPath = path.resolve('./database/uploaded.sqlite')
 
 export async function GET() {
-  if (!fs.existsSync(dbPath)) {
+  if (!fs.existsSync(dbPath))
     return NextResponse.json([], { status: 200 })
-  }
 
   try {
     const db = new Database(dbPath)
